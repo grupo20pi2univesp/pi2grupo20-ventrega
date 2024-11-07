@@ -86,9 +86,9 @@
         <div class="message" style='text-align:center'>
 
             <div class="titleReception">
-                <h2>Cadastro de Voluntários</h2>
+                <h2>Cadastro na Newsletter da Liga</h2>
                 <br>
-                <p> Se você deseja se unir a nossa causa como um voluntário (a) cadastre-se e entraremos em contato com você brevemente! </p>
+                <p> Se você gostaria de receber informações de nossas atividades, cadastre-se na nossa Newsletter!</p>
             </div>
 
             <div>
@@ -96,32 +96,11 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit">Submeter Inscrição</button>                
+                    <button type="submit">Cadastrar na Newsletter!</button>                
                 </form>
             
             </div>
-            
-            <br>
-            <br>
-            <br>
 
-            <div class="titleReception">
-                <h2>Lista de Voluntários do Projeto</h2>
-            </div>
-
-            <div>
-            {% for voluntarios in voluntarios %}
-            <br>
-            <ul>
-            <li>Nome do Voluntário (a): {{voluntarios.nome_do_voluntario}}</li>
-            <li>Email : {{voluntarios.Email}}</li>
-            <li>Celular : {{voluntarios.Celular}}</li>
-            <li>Dias de Atuação: {{voluntarios.Dias_disponiveis_para_atuar}}</li>
-            <li>Atividades no Projeto: {{voluntarios.Atividades_que_gostaria_de_executar}}</li>
-            </ul>
-            <br>
-            {% endfor %}
-            </div>    
         </div>
 
             
@@ -133,7 +112,7 @@
         <p>
         <a class="btn-redes-sociais" href="#" role="button">Instagram</a>
         <a class="btn-redes-sociais" href="https://www.facebook.com/profile.php?id=100075741554563" role="button">Facebook</a>
-        <a class="btn-redes-sociais" href="newsletter" role="button">Cadastre na Newsletter!</a>
+        <a class="btn-redes-sociais" href="#" role="button">Newsletter</a>
         </p>
         <br>
         <p>
@@ -145,7 +124,6 @@
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/fonte.js' %}"></script>
-    
 </body>
 
 </html>

@@ -86,9 +86,9 @@
         <div class="message" style='text-align:center'>
 
             <div class="titleReception">
-                <h2>Cadastro de Voluntários</h2>
+                <h2>Cadastro de Atendidos</h2>
                 <br>
-                <p> Se você deseja se unir a nossa causa como um voluntário (a) cadastre-se e entraremos em contato com você brevemente! </p>
+                <p> Se você gostaria de se tornar um de nossos atendidos, cadastre-se no formulário abaixo e logo entraremos em contato com você!</p>
             </div>
 
             <div>
@@ -100,28 +100,7 @@
                 </form>
             
             </div>
-            
-            <br>
-            <br>
-            <br>
 
-            <div class="titleReception">
-                <h2>Lista de Voluntários do Projeto</h2>
-            </div>
-
-            <div>
-            {% for voluntarios in voluntarios %}
-            <br>
-            <ul>
-            <li>Nome do Voluntário (a): {{voluntarios.nome_do_voluntario}}</li>
-            <li>Email : {{voluntarios.Email}}</li>
-            <li>Celular : {{voluntarios.Celular}}</li>
-            <li>Dias de Atuação: {{voluntarios.Dias_disponiveis_para_atuar}}</li>
-            <li>Atividades no Projeto: {{voluntarios.Atividades_que_gostaria_de_executar}}</li>
-            </ul>
-            <br>
-            {% endfor %}
-            </div>    
         </div>
 
             
@@ -145,7 +124,6 @@
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/fonte.js' %}"></script>
-    
 </body>
 
 </html>

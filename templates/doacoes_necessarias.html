@@ -29,12 +29,16 @@
 <body>
     <header>
         <div id="logo-area">
+
             <img src="{% static 'img/logo.png' %}" id="logo">
         </div>
 
         <ul>
             <a href="index">
                 <li class="nav-item">Home</li>
+            </a>
+            <a href="noticias">
+                <li class="nav-item">Notícias</li>
             </a>
             <a href="sobre">
                 <li class="nav-item">Sobre</li>
@@ -48,23 +52,27 @@
             <a href="voluntario">
                 <li class="nav-item">Torne-se Voluntário</li>
             </a>
+            <a href="atendidos">
+                <li class="nav-item">Atendidos</li>
+            </a>
             <a href="ajude">
                 <li class="nav-item">Ajude</li>
             </a>
         </ul>
     </header>
-    
     <button class="menu-toggle" onclick="toggleMenu()">
         <div class="menu-toggle-icon"></div>
     </button>
 
     <div class="sidebar" id="sidebar">
         <ul class="navs">
-            <li><a href="../index" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="noticias" class="nav-item">Noticias</a></li>
             <li><a href="sobre" class="nav-item">Sobre</a></li>
             <li><a href="equipe" class="nav-item">Equipe</a></li>
-            <li><a href="#" class="nav-item">Doações Necessárias</a></li>
+            <li><a href="doacoes_necessarias" class="nav-item">Doações Necessárias</a></li>
             <li><a href="voluntario" class="nav-item">Torne-se Voluntário</a></li>
+            <li><a href="atendidos" class="nav-item">Atendidos</a></li>
             <li><a href="ajude" class="nav-item">Ajude</a></li>
         </ul>
     </div>
@@ -73,9 +81,9 @@
         <div class="title">
             <h1>Juntos somos mais fortes!</h1>
             <div class="hashtags">
-                <p>#informação</p>
-                <p>#conscientização</p>
-                <p>#prevenção</p>
+                <p class="acessi">#informação</p>
+                <p class="acessi">#conscientização</p>
+                <p class="acessi">#prevenção</p>
             </div>
         </div>
         <div class="imgArea">
@@ -86,20 +94,10 @@
     <section id="infoArea">
         <div class="message">
 
-
-<!--             <div class="titleReception">
-                <h2>Lista de Doações Necessárias</h2>
-            </div>
-            <div> -->
-
-<!--                 <form method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Inserir Doação no Sistema!</button>
-                </form> -->
-
                 <div class="titleReception">
                     <h2>Lista de Doações Necessárias</h2>
+                    <br>
+                    <p> Aqui deixamos indicados algumas de nossas maiores necessidades para o momento! </p>
                 </div>
 
                 <div>
@@ -121,11 +119,22 @@
         </div>
     </section>
     <footer>
+        <div>
+        <p>
         <a class="btn-redes-sociais" href="#" role="button">Instagram</a>
         <a class="btn-redes-sociais" href="https://www.facebook.com/profile.php?id=100075741554563" role="button">Facebook</a>
-        <a class="btn-redes-sociais" href="#" role="button">Newsletter</a>
+        <a class="btn-redes-sociais" href="newsletter" role="button">Cadastre na Newsletter!</a>
+        </p>
+        <br>
+        <p>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('15px')">-A</button>
+        <button type="button" class="btn-redes-sociais" name="btn1" onclick="changeSizeByBtn('22px')">A</button>
+        <button type="button" class="btn-redes-sociais" name="btn3" onclick="changeSizeByBtn('30px')">A+</button>
+        </p>
+    </div>
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/fonte.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

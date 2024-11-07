@@ -22,3 +22,22 @@ class voluntario_cadastro(models.Model):
     
     def __str__(self):
         return self.nome_do_voluntario
+    
+class atendidos_cadastro(models.Model):
+    nome_do_atendido = models.CharField(max_length=300, null=True)
+    data_de_nascimento = models.DateField(blank=True, null=True)
+    Endereco = models.CharField(max_length=300, null=True)
+    Email = models.EmailField(blank=True, null=True)
+    Celular = models.CharField(max_length=20, blank=True, null=True)
+        
+    def __str__(self):
+        return self.nome_do_atendido
+
+class newsletter_cadastro(models.Model):
+    nome_assinante = models.CharField(max_length=300, null=True)
+    data_de_nascimento = models.DateField(blank=True, null=True)
+    Email = models.EmailField(blank=True, null=True)
+    Celular = models.CharField(max_length=20, blank=True, null=True)
+
+    def __str__(self):
+        return self.nome_assinante   

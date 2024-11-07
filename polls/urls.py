@@ -1,17 +1,19 @@
 from django.urls import path
 
 #importando views na polls
-from polls.views import index, sobre, voluntario, doacoes_necessarias, equipe, ajude
+from polls.views import index, sobre, voluntario, doacoes_necessarias, equipe, ajude, noticias,atendidos,newsletter
 
 #criando lista de caminhos para as views
 
 urlpatterns = [ 
     path('index', index, name="index"),
+    path('noticias', noticias, name="noticias"),
     path('sobre', sobre, name="sobre"),
     path('equipe', equipe, name="equipe"),
     path('doacoes_necessarias', doacoes_necessarias, name="doacoes_necessarias"),
     path('voluntario', voluntario, name="voluntario"),
+    path('atendidos', atendidos, name="atendidos"),
     path('ajude', ajude, name="ajude"),
+    path('newsletter', newsletter, name="newsletter"),
     path('', index, name='index'),
-
 ]
