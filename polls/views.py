@@ -4,7 +4,6 @@ from .models import *
 from django.http import HttpResponse
 from polls.forms import doacaoforms,voluntarioforms,atendidosforms,newsletterforms
 
-
 # Define view de teste baseada em função (rotina para executar)
 def index(request):
     return render (request, 'index.html')
@@ -20,7 +19,7 @@ def sobre(request):
 def equipe(request):
     return render (request, 'equipe.html')
 
-def doacoes_necessarias(request):
+def doacoes(request):
     
     doacoes = doacao_cadastro.objects.all()
 
@@ -32,7 +31,7 @@ def doacoes_necessarias(request):
             'form': form,
         }
 
-        return render(request, 'doacoes_necessarias.html', {'form': form,'doacoes': doacoes})
+        return render(request, 'doacoes.html', {'form': form,'doacoes': doacoes})
     
     else:
 
@@ -47,7 +46,7 @@ def doacoes_necessarias(request):
             'form': form,
             }
 
-        return render(request, 'doacoes_necessarias.html', {'form': form,'doacoes': doacoes})
+        return render(request, 'doacoes.html', {'form': form,'doacoes': doacoes})
     
 def voluntario(request):
      
@@ -142,3 +141,6 @@ def newsletter(request):
         return render(request, 'newsletter.html', {'form': form, 'newsletter': newsletter})
 
     return render (request, 'newsletter.html')
+
+def infouteis(request):
+    return render (request, 'infouteis.html')
